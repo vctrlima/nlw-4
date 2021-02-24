@@ -1,0 +1,11 @@
+@import './reset';
+@import './variables';
+@import './font-size';
+
+body {
+    background: $c-background;
+    color: $c-text;
+}
+body, input, textarea, button {
+    font: 400 1rem "Inter", sans-serif;
+}
