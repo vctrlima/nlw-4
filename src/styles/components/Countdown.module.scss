@@ -45,7 +45,27 @@
     font-size: 1.25rem;
     font-weight: 600;
     transition: background-color 0.2s linear;
-    &:hover {
+    outline: none;
+    &:not(:disabled):hover {
         background: $c-blue-dark;
+    }
+    &.isActive {
+        background: $c-white;
+        color: $c-title;
+        &:not(:disabled) {
+            &:hover {
+                background: $c-red;
+                color: $c-white;
+            }
+        }
+    }
+    &:disabled {
+        background: $c-white;
+        color: $c-text;
+        cursor: not-allowed;
+        border-bottom: .25rem solid $c-green;
+        img {
+            margin-left: .75rem;
+        }
     }
 }
